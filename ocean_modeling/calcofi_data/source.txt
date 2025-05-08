@@ -1,7 +1,8 @@
-calcofi data source: https://calcofi.org/data/oceanographic-data/bottle-database/
+CalCOFI data source: https://calcofi.org/data/oceanographic-data/bottle-database/
+
+Download the bottle.csv, and cast.csv data files from CalCOFI, then save them in calcofi_data/.
 
 A couple of light modifications are made to the dataset. First, a merged .csv file was created to associate cast metadata with each bottle sample. In the _Bottle.csv, an invalid character in position 77 caused errors, so the column was renamed to: Oxy_mumol. This allows reading the data in utf-8 without special processing.
-
 
 
 From the data page:

@@ -10,7 +10,7 @@ Models are evaluated using both conventional metrics ($R^2$, RMSE, MAE) and the 
 - `src/`: Code used in this project and analysis
 - `evals/`: The for-score runs used in the paper
 - `plots/`: Plots used in the paper
-- `calcofi_data/`: Raw (and processed) CalCOFI dataset, and California coastline data from Natural Earth
+- `calcofi_data/`: Download the Bottle and Cast .csv files to here, this also contains the California coastline data from Natural Earth
 
 ## Note
 Some models are commented out and use reduced hyperparameter grids to keep training time feasible. All work is performed on a Apple MacBook Pro (14 core M4 CPU, 48GB RAM).
