@@ -1,0 +1,587 @@
+===== MODEL REPORT =====
+Timestamp: 2025-05-07 20:38:43
+Test size: 0.2, Random state: 9382357
+Features: Depthm, Salnty, O2ml_L, STheta, O2Sat, Oxy_mumol/Kg, ChlorA, Phaeop, NO2uM, NO3uM, SiO3uM, T_degC, PO4uM, Lat_Dec, Lon_Dec, d_from_shore_m
+Response: NH3uM
+Optimization metric: Wasserstein distance (lower is better)
+
+MODEL #1: KNN
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.016490 (primary metric)
+  R² Score: 0.4192
+  RMSE: 0.2370
+  MAE: 0.0698
+  MAPE: inf%
+  Max Error: 7.2462
+  Explained Variance: 0.4193
+  Mean Residual: 0.0025
+  Std Residual: 0.2370
+
+TIMING METRICS:
+  Training Time: 1.9483 seconds
+  Inference Time: 0.1769 seconds
+  Wasserstein per Training Second: 31.125324
+  Wasserstein per Inference Second: 342.808305
+
+BEST PARAMETERS:
+  knn__algorithm: auto
+  knn__n_neighbors: 3
+  knn__weights: distance
+
+SELECTED FEATURES:
+  d_from_shore_m (index 15)
+  STheta (index 3)
+  Lon_Dec (index 14)
+  Lat_Dec (index 13)
+  Salnty (index 1)
+  Phaeop (index 7)
+  NO2uM (index 8)
+  T_degC (index 11)
+  O2ml_L (index 2)
+  PO4uM (index 12)
+  ChlorA (index 6)
+  NO3uM (index 9)
+  O2Sat (index 4)
+  SiO3uM (index 10)
+  Oxy_mumol/Kg (index 5)
+  Depthm (index 0)
+
+
+MODEL #2: XGBoost
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.033690 (primary metric)
+  R² Score: 0.5152
+  RMSE: 0.2165
+  MAE: 0.0856
+  MAPE: inf%
+  Max Error: 5.0942
+  Explained Variance: 0.5152
+  Mean Residual: -0.0009
+  Std Residual: 0.2165
+
+TIMING METRICS:
+  Training Time: 0.4274 seconds
+  Inference Time: 0.0012 seconds
+  Wasserstein per Training Second: 69.445003
+  Wasserstein per Inference Second: 25283.763453
+
+BEST PARAMETERS:
+  xgb__colsample_bytree: 0.8
+  xgb__max_depth: 6
+  xgb__n_estimators: 20
+  xgb__subsample: 0.8
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Lon_Dec (index 14)
+  Phaeop (index 7)
+  Salnty (index 1)
+  Depthm (index 0)
+  NO3uM (index 9)
+  PO4uM (index 12)
+  O2Sat (index 4)
+  d_from_shore_m (index 15)
+  ChlorA (index 6)
+  Lat_Dec (index 13)
+  SiO3uM (index 10)
+  Oxy_mumol/Kg (index 5)
+  STheta (index 3)
+  O2ml_L (index 2)
+  T_degC (index 11)
+
+
+MODEL #3: NN-Large
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.037520 (primary metric)
+  R² Score: 0.4276
+  RMSE: 0.2353
+  MAE: 0.0952
+  MAPE: inf%
+  Max Error: 7.4808
+  Explained Variance: 0.4280
+  Mean Residual: 0.0063
+  Std Residual: 0.2352
+
+TIMING METRICS:
+  Training Time: 50.0478 seconds
+  Inference Time: 0.0063 seconds
+  Wasserstein per Training Second: 0.532546
+  Wasserstein per Inference Second: 4227.096023
+
+BEST PARAMETERS:
+  mlp__learning_rate_init: 0.001
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Phaeop (index 7)
+  NO3uM (index 9)
+  SiO3uM (index 10)
+  Lat_Dec (index 13)
+  Lon_Dec (index 14)
+  O2ml_L (index 2)
+  Salnty (index 1)
+  T_degC (index 11)
+  STheta (index 3)
+  Oxy_mumol/Kg (index 5)
+  O2Sat (index 4)
+  Depthm (index 0)
+  d_from_shore_m (index 15)
+
+
+MODEL #4: NN-Medium
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.039316 (primary metric)
+  R² Score: 0.4075
+  RMSE: 0.2394
+  MAE: 0.0979
+  MAPE: inf%
+  Max Error: 7.9859
+  Explained Variance: 0.4077
+  Mean Residual: -0.0046
+  Std Residual: 0.2393
+
+TIMING METRICS:
+  Training Time: 30.7975 seconds
+  Inference Time: 0.0031 seconds
+  Wasserstein per Training Second: 0.825882
+  Wasserstein per Inference Second: 8304.088281
+
+BEST PARAMETERS:
+  mlp__learning_rate_init: 0.001
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  SiO3uM (index 10)
+  Phaeop (index 7)
+  NO3uM (index 9)
+  Depthm (index 0)
+  Lat_Dec (index 13)
+  Salnty (index 1)
+  T_degC (index 11)
+  Lon_Dec (index 14)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  O2Sat (index 4)
+  STheta (index 3)
+  d_from_shore_m (index 15)
+
+
+MODEL #5: GLM-3
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.044578 (primary metric)
+  R² Score: 0.3389
+  RMSE: 0.2528
+  MAE: 0.1085
+  MAPE: inf%
+  Max Error: 6.9569
+  Explained Variance: 0.3389
+  Mean Residual: 0.0004
+  Std Residual: 0.2528
+
+TIMING METRICS:
+  Training Time: 20.7659 seconds
+  Inference Time: 0.0635 seconds
+  Wasserstein per Training Second: 1.080267
+  Wasserstein per Inference Second: 353.163392
+
+BEST PARAMETERS:
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Salnty (index 1)
+  Lat_Dec (index 13)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  d_from_shore_m (index 15)
+  Lon_Dec (index 14)
+  O2Sat (index 4)
+  STheta (index 3)
+  T_degC (index 11)
+  Depthm (index 0)
+  SiO3uM (index 10)
+  NO3uM (index 9)
+
+
+MODEL #6: GLM-2
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.046454 (primary metric)
+  R² Score: 0.3723
+  RMSE: 0.2464
+  MAE: 0.1107
+  MAPE: inf%
+  Max Error: 8.7527
+  Explained Variance: 0.3724
+  Mean Residual: -0.0023
+  Std Residual: 0.2464
+
+TIMING METRICS:
+  Training Time: 2.7597 seconds
+  Inference Time: 0.0094 seconds
+  Wasserstein per Training Second: 7.800392
+  Wasserstein per Inference Second: 2295.900499
+
+BEST PARAMETERS:
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Salnty (index 1)
+  Lat_Dec (index 13)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  d_from_shore_m (index 15)
+  Lon_Dec (index 14)
+  O2Sat (index 4)
+  STheta (index 3)
+  T_degC (index 11)
+  Depthm (index 0)
+  SiO3uM (index 10)
+  NO3uM (index 9)
+
+
+MODEL #7: RandomForest
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.046973 (primary metric)
+  R² Score: 0.2555
+  RMSE: 0.2683
+  MAE: 0.0998
+  MAPE: inf%
+  Max Error: 9.6392
+  Explained Variance: 0.2555
+  Mean Residual: -0.0024
+  Std Residual: 0.2683
+
+TIMING METRICS:
+  Training Time: 3.3635 seconds
+  Inference Time: 0.0066 seconds
+  Wasserstein per Training Second: 6.329432
+  Wasserstein per Inference Second: 3227.977828
+
+BEST PARAMETERS:
+  rf__n_estimators: 10
+  rf__min_samples_split: 5
+  rf__max_depth: 5
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  Salnty (index 1)
+  Depthm (index 0)
+  STheta (index 3)
+  ChlorA (index 6)
+  NO3uM (index 9)
+  d_from_shore_m (index 15)
+  O2ml_L (index 2)
+  Lon_Dec (index 14)
+  T_degC (index 11)
+  Oxy_mumol/Kg (index 5)
+  O2Sat (index 4)
+  SiO3uM (index 10)
+  Lat_Dec (index 13)
+  PO4uM (index 12)
+
+
+MODEL #8: NN-Small
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.055054 (primary metric)
+  R² Score: 0.2617
+  RMSE: 0.2672
+  MAE: 0.1116
+  MAPE: inf%
+  Max Error: 10.5744
+  Explained Variance: 0.2618
+  Mean Residual: -0.0029
+  Std Residual: 0.2672
+
+TIMING METRICS:
+  Training Time: 19.3825 seconds
+  Inference Time: 0.0010 seconds
+  Wasserstein per Training Second: 0.937128
+  Wasserstein per Inference Second: 17647.661995
+
+BEST PARAMETERS:
+  mlp__learning_rate_init: 0.001
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  STheta (index 3)
+  O2ml_L (index 2)
+  PO4uM (index 12)
+  Phaeop (index 7)
+  Salnty (index 1)
+  SiO3uM (index 10)
+  Depthm (index 0)
+  NO3uM (index 9)
+  T_degC (index 11)
+  ChlorA (index 6)
+  Oxy_mumol/Kg (index 5)
+  Lat_Dec (index 13)
+  O2Sat (index 4)
+  Lon_Dec (index 14)
+  d_from_shore_m (index 15)
+
+
+MODEL #9: Lasso
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.059486 (primary metric)
+  R² Score: 0.2035
+  RMSE: 0.2775
+  MAE: 0.1075
+  MAPE: inf%
+  Max Error: 11.2384
+  Explained Variance: 0.2035
+  Mean Residual: -0.0014
+  Std Residual: 0.2775
+
+TIMING METRICS:
+  Training Time: 0.6396 seconds
+  Inference Time: 0.0011 seconds
+  Wasserstein per Training Second: 26.282466
+  Wasserstein per Inference Second: 15130.685760
+
+BEST PARAMETERS:
+  lso__alpha: 0.01
+
+SELECTED FEATURES:
+  Phaeop (index 7)
+  NO2uM (index 8)
+  Lon_Dec (index 14)
+  NO3uM (index 9)
+  ChlorA (index 6)
+  Oxy_mumol/Kg (index 5)
+  O2Sat (index 4)
+  T_degC (index 11)
+  Salnty (index 1)
+  O2ml_L (index 2)
+  STheta (index 3)
+  PO4uM (index 12)
+  SiO3uM (index 10)
+  Lat_Dec (index 13)
+  Depthm (index 0)
+  d_from_shore_m (index 15)
+
+
+MODEL #10: ElasticNet
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.063024 (primary metric)
+  R² Score: 0.2020
+  RMSE: 0.2778
+  MAE: 0.1076
+  MAPE: inf%
+  Max Error: 11.2631
+  Explained Variance: 0.2021
+  Mean Residual: -0.0013
+  Std Residual: 0.2778
+
+TIMING METRICS:
+  Training Time: 0.2476 seconds
+  Inference Time: 0.0022 seconds
+  Wasserstein per Training Second: 64.081061
+  Wasserstein per Inference Second: 7061.073403
+
+BEST PARAMETERS:
+  en__alpha: 0.1
+  en__l1_ratio: 0.1
+
+SELECTED FEATURES:
+  Depthm (index 0)
+  ChlorA (index 6)
+  Lon_Dec (index 14)
+  T_degC (index 11)
+  Phaeop (index 7)
+  NO2uM (index 8)
+  Oxy_mumol/Kg (index 5)
+  SiO3uM (index 10)
+  O2Sat (index 4)
+  Salnty (index 1)
+  O2ml_L (index 2)
+  STheta (index 3)
+  PO4uM (index 12)
+  NO3uM (index 9)
+  Lat_Dec (index 13)
+  d_from_shore_m (index 15)
+
+
+MODEL #11: Spline
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.068356 (primary metric)
+  R² Score: 0.2802
+  RMSE: 0.2638
+  MAE: 0.1188
+  MAPE: inf%
+  Max Error: 10.6993
+  Explained Variance: 0.2803
+  Mean Residual: -0.0015
+  Std Residual: 0.2638
+
+TIMING METRICS:
+  Training Time: 1.1541 seconds
+  Inference Time: 0.0222 seconds
+  Wasserstein per Training Second: 12.676330
+  Wasserstein per Inference Second: 658.329578
+
+BEST PARAMETERS:
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Salnty (index 1)
+  Lat_Dec (index 13)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  d_from_shore_m (index 15)
+  Lon_Dec (index 14)
+  O2Sat (index 4)
+  STheta (index 3)
+  T_degC (index 11)
+  Depthm (index 0)
+  SiO3uM (index 10)
+  NO3uM (index 9)
+
+
+MODEL #12: Ridge
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.074357 (primary metric)
+  R² Score: 0.2389
+  RMSE: 0.2713
+  MAE: 0.1201
+  MAPE: inf%
+  Max Error: 10.9440
+  Explained Variance: 0.2389
+  Mean Residual: -0.0021
+  Std Residual: 0.2713
+
+TIMING METRICS:
+  Training Time: 0.6658 seconds
+  Inference Time: 0.0011 seconds
+  Wasserstein per Training Second: 20.198856
+  Wasserstein per Inference Second: 12361.943455
+
+BEST PARAMETERS:
+  rdg__alpha: 10.0
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Salnty (index 1)
+  Lat_Dec (index 13)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  d_from_shore_m (index 15)
+  Lon_Dec (index 14)
+  O2Sat (index 4)
+  STheta (index 3)
+  T_degC (index 11)
+  Depthm (index 0)
+  SiO3uM (index 10)
+  NO3uM (index 9)
+
+
+MODEL #13: OLS
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.075227 (primary metric)
+  R² Score: 0.2390
+  RMSE: 0.2713
+  MAE: 0.1208
+  MAPE: inf%
+  Max Error: 10.9387
+  Explained Variance: 0.2391
+  Mean Residual: -0.0021
+  Std Residual: 0.2713
+
+TIMING METRICS:
+  Training Time: 1.5499 seconds
+  Inference Time: 0.0015 seconds
+  Wasserstein per Training Second: 8.576748
+  Wasserstein per Inference Second: 8614.822069
+
+BEST PARAMETERS:
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  PO4uM (index 12)
+  Salnty (index 1)
+  Lat_Dec (index 13)
+  O2ml_L (index 2)
+  Oxy_mumol/Kg (index 5)
+  d_from_shore_m (index 15)
+  Lon_Dec (index 14)
+  O2Sat (index 4)
+  STheta (index 3)
+  T_degC (index 11)
+  Depthm (index 0)
+  SiO3uM (index 10)
+  NO3uM (index 9)
+
+
+MODEL #14: GradientBoost
+==================================================
+PERFORMANCE METRICS:
+  Wasserstein Distance: 0.096997 (primary metric)
+  R² Score: 0.2342
+  RMSE: 0.2722
+  MAE: 0.1135
+  MAPE: inf%
+  Max Error: 9.3312
+  Explained Variance: 0.2342
+  Mean Residual: -0.0006
+  Std Residual: 0.2722
+
+TIMING METRICS:
+  Training Time: 26.2297 seconds
+  Inference Time: 0.0107 seconds
+  Wasserstein per Training Second: 0.393052
+  Wasserstein per Inference Second: 962.081571
+
+BEST PARAMETERS:
+  gb__learning_rate: 0.01
+  gb__max_depth: 6
+  gb__n_estimators: 50
+
+SELECTED FEATURES:
+  NO2uM (index 8)
+  Depthm (index 0)
+  O2ml_L (index 2)
+  Lon_Dec (index 14)
+  Salnty (index 1)
+  NO3uM (index 9)
+  Lat_Dec (index 13)
+  Oxy_mumol/Kg (index 5)
+  Phaeop (index 7)
+  ChlorA (index 6)
+  SiO3uM (index 10)
+  T_degC (index 11)
+  O2Sat (index 4)
+  STheta (index 3)
+  d_from_shore_m (index 15)
+  PO4uM (index 12)
+
+
